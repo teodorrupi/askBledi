@@ -3,11 +3,26 @@
  */
 
 
+function getBledisOpinion(){
+    var quotes = ["Po mir kjo, po ato imazhet si do ti rujm ne database ?",
+                  "Ah Zoo",
+                  "Ec ec ec",
+                  "Dole b***qo",
+                  "Me e shtrenjte, me e keqe, po ja vlen",
+                  "Apple eshte Apple",
+                  "Ishalla po na merr Baumani ne pune",
+                  "Ec ec ec",
+                  "Ah Zoo",
+                  "Ec ec ec",];
+    return quotes[Math.floor(Math.random() * quotes.length)];
+}
+
 $(document).ready(function() {
     $("#ask").click(function() {
 
-        $('.row.question-row').fadeOut().delay(8000).fadeIn();
-        $('.row.answer-row').fadeIn().delay(8000).fadeOut();
+        $(".answertext").text(getBledisOpinion());
+        $('.row.question-row').fadeOut().delay(6000).fadeIn();
+        $('.row.answer-row').fadeIn().delay(6000).fadeOut();
 
         //$.ajax({
         //    type: "POST",
