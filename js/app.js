@@ -46,3 +46,33 @@ $(document).ready(function() {
 })
 
 
+// When the DOM is ready, run this function
+$(document).ready(function() {
+    var quotes = ["Po mir kjo, po ato imazhet si do ti rujm ne database ?",
+        "Ah Zoo",
+        "Ec ec ec",
+        "Dole b***qo",
+        "Me e shtrenjte, me e keqe, po ja vlen",
+        "Apple eshte Apple",
+        "Ishalla po na merr Baumani ne pune"];
+
+    for(qt in quotes){
+        $('.carousel-inner').prepend(
+            "<div class='item'>" +
+            "<blockquote>" +
+            "<div class='col-sm-9'>" +
+            "<p>" + quotes[qt] +
+            "</p>" +
+            "<small>" +
+            "Jeta dhe Shkenca sipas Bledit" +
+            "</small>" +
+            "</div></blockquote></div>"
+        )
+    }
+
+    //Set the carousel options
+    $('#quote-carousel').carousel({
+        pause: true,
+        interval: 10000
+    });
+});
